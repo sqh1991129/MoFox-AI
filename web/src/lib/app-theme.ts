@@ -2,30 +2,30 @@ import type { CSSProperties } from "react";
 import type { ThemeConfig } from "antd";
 import { theme as antdTheme } from "antd";
 
-const neutral = {
+const brandTheme = {
     light: {
-        primary: "#171717",
-        primaryHover: "#000000",
+        primary: "#4F46E5",
+        primaryHover: "#4338CA",
         primaryText: "#ffffff",
-        menuBg: "#f5f5f5",
-        menuText: "#171717",
-        selectActiveBg: "#f5f5f5",
-        selectSelectedBg: "#f0f0f0",
-        selectText: "#171717",
-        tableSelectedBg: "rgba(17, 17, 17, 0.05)",
-        tableSelectedHoverBg: "rgba(17, 17, 17, 0.08)",
+        menuBg: "rgba(79, 70, 229, 0.08)",
+        menuText: "#4F46E5",
+        selectActiveBg: "rgba(79, 70, 229, 0.06)",
+        selectSelectedBg: "rgba(79, 70, 229, 0.12)",
+        selectText: "#4F46E5",
+        tableSelectedBg: "rgba(79, 70, 229, 0.05)",
+        tableSelectedHoverBg: "rgba(79, 70, 229, 0.08)",
     },
     dark: {
-        primary: "#fafafa",
-        primaryHover: "#ffffff",
-        primaryText: "#171717",
-        menuBg: "#262626",
-        menuText: "#fafafa",
-        selectActiveBg: "#262626",
-        selectSelectedBg: "#333333",
-        selectText: "#fafafa",
-        tableSelectedBg: "rgba(255, 255, 255, 0.08)",
-        tableSelectedHoverBg: "rgba(255, 255, 255, 0.12)",
+        primary: "#6366F1",
+        primaryHover: "#818CF8",
+        primaryText: "#ffffff",
+        menuBg: "rgba(99, 102, 241, 0.16)",
+        menuText: "#A5B4FC",
+        selectActiveBg: "rgba(99, 102, 241, 0.14)",
+        selectSelectedBg: "rgba(99, 102, 241, 0.22)",
+        selectText: "#E0E7FF",
+        tableSelectedBg: "rgba(99, 102, 241, 0.10)",
+        tableSelectedHoverBg: "rgba(99, 102, 241, 0.15)",
     },
 };
 
@@ -38,11 +38,11 @@ export const adminLayoutStyle = {
 };
 
 export function getAntThemeConfig(dark: boolean): ThemeConfig {
-    const color = dark ? neutral.dark : neutral.light;
+    const color = dark ? brandTheme.dark : brandTheme.light;
 
     return {
         algorithm: dark ? antdTheme.darkAlgorithm : antdTheme.defaultAlgorithm,
-        cssVar: { key: dark ? "infinite-canvas-dark" : "infinite-canvas-light" },
+        cssVar: { key: dark ? "mofox-dark" : "mofox-light" },
         token: {
             colorPrimary: color.primary,
             colorInfo: color.primary,
@@ -53,16 +53,16 @@ export function getAntThemeConfig(dark: boolean): ThemeConfig {
         },
         components: {
             Button: {
-                primaryShadow: "none",
+                primaryShadow: dark ? "0 2px 8px rgba(99, 102, 241, 0.25)" : "0 2px 8px rgba(79, 70, 229, 0.2)",
             },
             Menu: {
                 itemActiveBg: color.menuBg,
                 itemHoverBg: color.menuBg,
                 itemSelectedBg: color.menuBg,
                 itemSelectedColor: color.menuText,
-                darkItemHoverBg: neutral.dark.menuBg,
-                darkItemSelectedBg: neutral.dark.menuBg,
-                darkItemSelectedColor: neutral.dark.menuText,
+                darkItemHoverBg: brandTheme.dark.menuBg,
+                darkItemSelectedBg: brandTheme.dark.menuBg,
+                darkItemSelectedColor: brandTheme.dark.menuText,
             },
             Select: {
                 optionActiveBg: color.selectActiveBg,

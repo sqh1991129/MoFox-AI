@@ -7,8 +7,12 @@ import "./globals.css";
 import React from "react";
 
 export const metadata: Metadata = {
-    title: "无限画布",
-    description: "一个无限画布创作工具",
+    title: "墨狐AI - 赋能创作",
+    description: "墨狐AI，全能多模态创意工作台与无限画布，智能生成、赋能创作。",
+    icons: {
+        icon: "/mofox-icon-180.png",
+        apple: "/mofox-icon-180.png",
+    },
 };
 
 export default function RootLayout({

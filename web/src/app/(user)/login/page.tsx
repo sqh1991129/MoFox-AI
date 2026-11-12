@@ -85,19 +85,21 @@ function LoginContent() {
     };
 
     return (
-        <main className="flex h-full min-h-0 items-center justify-center overflow-y-auto bg-background bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] px-6 py-10 [background-size:16px_16px] dark:bg-[radial-gradient(rgba(245,245,244,.16)_1px,transparent_1px)]">
-            <section className="w-full max-w-[420px]">
+        <main className="relative flex h-full min-h-0 items-center justify-center overflow-y-auto bg-background bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] px-6 py-10 [background-size:16px_16px] dark:bg-[radial-gradient(rgba(245,245,244,.16)_1px,transparent_1px)]">
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-96 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(79,70,229,0.18),transparent)] dark:bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(99,102,241,0.22),transparent)]" />
+            <section className="relative z-10 w-full max-w-[420px] rounded-2xl border border-stone-200/80 bg-background/80 p-8 shadow-xl shadow-indigo-500/5 backdrop-blur-xl dark:border-stone-800/80 dark:bg-stone-900/80">
                 <div className="mb-7 text-center">
-                    <span
-                        className="mx-auto mb-4 block size-12 bg-stone-950 dark:bg-stone-100"
-                        style={{
-                            mask: "url(/logo.svg) center / contain no-repeat",
-                            WebkitMask: "url(/logo.svg) center / contain no-repeat",
-                        }}
-                        aria-label="无限画布"
-                    />
-                    <h1 className="text-3xl font-semibold tracking-normal text-stone-950 dark:text-stone-100">账号登录</h1>
-                    <p className="mt-3 text-base leading-7 text-stone-500 dark:text-stone-400">支持账号密码和 Linux.do 登录。</p>
+                    <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-2xl bg-gradient-to-tr from-[#4F46E5] via-[#8B5CF6] to-[#38BDF8] p-[2px] shadow-lg shadow-indigo-500/25">
+                        <img
+                            src="/mofox-icon-180.png"
+                            alt="墨狐AI"
+                            className="size-full rounded-[14px] object-cover"
+                        />
+                    </div>
+                    <h1 className="text-2xl font-bold tracking-tight text-stone-950 dark:text-stone-100">
+                        墨狐AI <span className="text-base font-normal text-stone-500 dark:text-stone-400">· 赋能创作</span>
+                    </h1>
+                    <p className="mt-2 text-sm leading-relaxed text-stone-500 dark:text-stone-400">智能多模态创意工作台，支持账号密码与 Linux.do 登录。</p>
                 </div>
 
                 <Form<LoginFormValues> layout="vertical" size="large" requiredMark={false} onFinish={submit}>

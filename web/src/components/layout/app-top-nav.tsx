@@ -26,15 +26,13 @@ export function AppTopNav() {
                 <header className="sticky top-0 z-20 h-16 shrink-0 border-b border-stone-200 bg-background/90 backdrop-blur-xl dark:border-stone-800">
                     <div className="mx-auto flex h-full max-w-7xl items-stretch justify-between gap-5 px-6">
                         <div className="flex min-w-0 items-center">
-                            <Link href="/" className="flex h-full shrink-0 items-center gap-2 text-sm font-semibold leading-none tracking-tight text-stone-950 transition hover:text-stone-600 dark:text-stone-100 dark:hover:text-stone-300">
-                                <span
-                                    className="size-5 shrink-0 bg-current"
-                                    style={{
-                                        mask: "url(/logo.svg) center / contain no-repeat",
-                                        WebkitMask: "url(/logo.svg) center / contain no-repeat",
-                                    }}
+                            <Link href="/" className="flex h-full shrink-0 items-center gap-2.5 text-sm font-semibold leading-none tracking-tight text-stone-950 transition hover:opacity-85 dark:text-stone-100">
+                                <img
+                                    src="/mofox-icon-180.png"
+                                    alt="墨狐AI"
+                                    className="size-7 shrink-0 rounded-lg shadow-sm"
                                 />
-                                <span className="text-base font-medium">无限画布</span>
+                                <span className="text-base font-bold bg-gradient-to-r from-[#4F46E5] via-[#8B5CF6] to-[#38BDF8] bg-clip-text text-transparent">墨狐AI</span>
                             </Link>
 
                             <button
@@ -58,7 +56,7 @@ export function AppTopNav() {
                                             className={cn(
                                                 "relative flex h-16 shrink-0 items-center gap-2 text-sm leading-6 transition after:absolute after:inset-x-0 after:bottom-0 after:h-px",
                                                 active
-                                                    ? "font-medium text-stone-950 after:bg-stone-950 dark:text-stone-100 dark:after:bg-stone-100"
+                                                    ? "font-medium text-[#4F46E5] after:bg-[#4F46E5] dark:text-[#818CF8] dark:after:bg-[#818CF8]"
                                                     : "text-stone-500 after:bg-transparent hover:text-stone-950 dark:text-stone-400 dark:hover:text-stone-100",
                                             )}
                                         >
