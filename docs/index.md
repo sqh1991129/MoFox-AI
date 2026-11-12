@@ -5,6 +5,7 @@
 - [快速开始](overview/quick-start.md)
 - [功能介绍](overview/features.md)
 - [Docker 部署](overview/docker.md)
+- [macOS 桌面本地客户端方案](overview/macos-desktop-client.md)
 - [第三方 GitHub 提示词仓库](overview/third-party-prompt-repositories.md)
 
 ## 操作手册
